@@ -235,15 +235,6 @@ header.metadata-grid {
 .main-article {
   border-top: 1px solid var(--border-strong);
   padding-top: 1vw;
-  max-height: 55vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.main-article::-webkit-scrollbar {
-  display: none;
 }
 
 .main-article h2 {
@@ -372,6 +363,19 @@ footer.marquee-footer {
 @keyframes contentFadeIn {
   0%   { opacity: 0; transform: translateY(6px); }
   100% { opacity: 1; transform: translateY(0); }
+}
+
+.content-panel-inner {
+  max-height: 45vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-right: 0.5rem;
+}
+
+.content-panel-inner::-webkit-scrollbar {
+  display: none;
 }
 
 .content-panel-inner h2 {
