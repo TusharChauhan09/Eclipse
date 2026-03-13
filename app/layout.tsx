@@ -16,8 +16,11 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ECLIPSE // CLI",
+  title: "ECLIPSE-CLI",
   description: "Eclipse Command Line Interface",
+  icons: {
+    icon: "/image.png",
+  },
 };
 
 export default function RootLayout({
