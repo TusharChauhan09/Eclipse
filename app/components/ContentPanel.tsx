@@ -54,17 +54,17 @@ function CommandsContent() {
   return (
     <>
       <h2 className="weight-black">EVERY COMMAND YOU NEED.</h2>
-      <p>Eclipse CLI exposes a clean, composable command surface. Authenticate, build, deploy, and observe — all from your terminal.</p>
-      <span className="meta-label" style={{ marginTop: '1.2rem', display: 'block' }}>AUTH — LOGIN / SIGNUP</span>
-      <CmdRow cmd="eclipse auth login" />
-      <CmdRow cmd="eclipse auth signup --email you@domain.com" />
-      <CmdRow cmd="eclipse auth logout" />
-      <span className="meta-label" style={{ marginTop: '0.8rem', display: 'block' }}>CORE</span>
-      <CmdRow cmd="eclipse run <script>" />
-      <CmdRow cmd="eclipse build --env production" />
-      <CmdRow cmd="eclipse deploy --target cloud" />
-      <CmdRow cmd="eclipse logs --follow" />
-      <CmdRow cmd="eclipse status" />
+      <p>Eclipse CLI exposes a clean, composable command surface. Authenticate, wake up the AI, and observe — all from your terminal.</p>
+      <span className="meta-label" style={{ marginTop: '1.2rem', display: 'block' }}>AUTH</span>
+      <CmdRow cmd="eclipse login" />
+      <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', textTransform: 'none', opacity: 0.7, margin: '0.2rem 0 0.6rem' }}>Logs you into the CLI Authenticator using an OAuth flow.</p>
+      <CmdRow cmd="eclipse logout" />
+      <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', textTransform: 'none', opacity: 0.7, margin: '0.2rem 0 0.6rem' }}>Logs you out by clearing your saved authentication token.</p>
+      <CmdRow cmd="eclipse whoami" />
+      <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', textTransform: 'none', opacity: 0.7, margin: '0.2rem 0 0.6rem' }}>Displays information about the currently logged-in user (Name, Email, ID).</p>
+      <span className="meta-label" style={{ marginTop: '0.8rem', display: 'block' }}>AI</span>
+      <CmdRow cmd="eclipse wakeup" />
+      <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', textTransform: 'none', opacity: 0.7, margin: '0.2rem 0 0.6rem' }}>Wakes up the AI and prompts you to start either a simple chat, tool calling, or agentic mode.</p>
     </>
   );
 }
@@ -80,6 +80,7 @@ function PricingContent() {
           <span className="plan-name">FREE</span>
           <span className="plan-price">$0<span className="plan-period">/mo</span></span>
           <ul className="plan-features">
+            <li>Gemini API access</li>
             <li>5 scripts / day</li>
             <li>Community plugins</li>
             <li>Basic logs</li>
@@ -90,8 +91,9 @@ function PricingContent() {
         <div className="plan-card plan-card--featured">
           <span className="plan-badge">MOST POPULAR</span>
           <span className="plan-name">PRO</span>
-          <span className="plan-price">$12<span className="plan-period">/mo</span></span>
+          <span className="plan-price">$2<span className="plan-period">/mo</span></span>
           <ul className="plan-features">
+            <li>Gemini + OpenAI API access</li>
             <li>Unlimited scripts</li>
             <li>All plugins</li>
             <li>Advanced logs + traces</li>
