@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "ECLIPSE-CLI",
   description: "Eclipse Command Line Interface",
   icons: {
-    icon: "/image.png",
+    icon: "/eclipse.svg",
   },
 };
 
